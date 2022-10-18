@@ -1,0 +1,83 @@
+1. Finding repeated characters in a string:
+def repeat(word, m, n):
+    if(m > len(word)):
+        m = len(word)
+    repeat_word = word[:m]
+    result = ""
+    for i in range(n):
+        result = result+repeat_word
+    print(result)
+repeat("geeks", 2, 3)
+
+2. Finding unique characters in a string:
+def repeat(word, m, n):
+    if(m > len(word)):
+        m = len(word)
+    repeat_word = word[:m]
+    result = ""
+    for i in range(n):
+        result = result+repeat_word
+    print(result)
+repeat("geeks", 2, 3)
+
+3. Insertion sort:
+def insertionSort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i-1
+        while j >=0 and key < arr[j] :
+                arr[j+1] = arr[j]
+                j -= 1
+        arr[j+1] = key
+ arr = [12, 11, 13, 5, 6]
+insertionSort(arr)
+print ("Sorted array is:")
+for i in range(len(arr)):
+    print ("%d" %arr[i])
+
+4. convert normal time to railway time:
+def convert24(str1):
+     
+    # Checking if last two elements of time
+    # is AM and first two elements are 12
+    if str1[-2:] == "AM" and str1[:2] == "12":
+        return "00" + str1[2:-2]
+         
+    # remove the AM    
+    elif str1[-2:] == "AM":
+        return str1[:-2]
+     
+    # Checking if last two elements of time
+    # is PM and first two elements are 12
+    elif str1[-2:] == "PM" and str1[:2] == "12":
+        return str1[:-2]
+         
+    else:
+         
+        # add 12 to hours and remove PM
+        return str(int(str1[:2]) + 12) + str1[2:8]
+ 
+# Driver Code        
+print(convert24("08:05:45 PM"))
+
+5. Linear search:
+
+def search(List, n):
+ 
+    for i in range(len(List)):
+        if List[i] == n:
+            return True
+    return False
+ 
+ 
+# list which contains both string and numbers.
+List = [1, 2, 'sachin', 4, 'Geeks', 6]
+ 
+# Driver Code
+n = 'Geeks'
+ 
+if search(List, n):
+    print("Found")
+else:
+    print("Not Found")
+
